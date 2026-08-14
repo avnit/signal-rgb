@@ -87,3 +87,20 @@ Script SignalRGB without an MCP client (handshake + one tool call + exit):
 - Audio-reactive effects listen to the system's default audio output — no per-app wiring.
 - SignalRGB also integrates with **NVIDIA G-Assist** (Settings → AI Integration) once
   G-Assist is installed via the NVIDIA App (RTX GPU with 6 GB+ VRAM required).
+
+<!-- ARCH-DIAGRAM:START -->
+
+## Architecture
+
+> Auto-generated architecture diagram. See [`docs/context-map.md`](docs/context-map.md) for the full context map (core application, containers/cloud, and database connections).
+
+```mermaid
+flowchart TD
+  User([User / Client])
+  UI["Frontend<br/>React"]
+  App["signal-rgb"]
+  User --> UI
+  User --> App
+```
+
+<!-- ARCH-DIAGRAM:END -->
